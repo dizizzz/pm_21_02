@@ -69,3 +69,19 @@ exports.watch = task_watch
 // exports.build = build;
 exports.default = series(task_html,task_sass,task_scripts,task_imgs,
   task_watch);
+
+//обробляємо html файли
+function html() {
+  return src("app/**/*.html")//Беремо файли з розширенням html із папки app/ та усіх підпапок
+  .pipe(dest("build/"));//переміщаємо у папку build/
+}
+
+//обробляємо файли зображень
+function img() {
+  return src("app/img/*.{png,jpg,jped,gif}",//беремо файли з розширенням png,jpg,jped,gif
+         {base:"app"}) //задаємо параметр base, щоб зберегти вложеність файлів
+      .pipe(dest("build/")); //переміщаємо у папку build/
+}
+
+//збирання проекту
+exports.build = series(html, img);
