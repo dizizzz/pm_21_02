@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>monobank</title> 
+  <meta charset="UTF-8">
+  <link rel="icon" href="images\mono.png" type="image/png">
+  <link rel="stylesheet" href="css\bootstrap.min.css">
+  <link rel="stylesheet" href="css\styles.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap">
+
+  
+
+</head>
+<body>
+  <div class="top-menu">
+    <nav class="navbar">
+      <a class="navbar-brand" href="#">monobank</a>
+        
+      <div class="line-divider"></div>
+      
+      <a class="navbar-brand web">Web</a>
+
+      <div class="course">
+        <div class="container text-center">
+          <div class="row align-items-center">
+            <div class="col">
+              <span class="usd">USD 27,23</span>
+              <img src="images\^down.svg" alt="arrow">
+            </div>
+            <div class="line">/</div>
+            <div class="col">
+              <span class="eud">EUD 32,60</span>
+              <img src="images\^.svg" alt="arrow">
+            </div>
+            <div class="line">/</div>
+            <div class="col">
+              <span class="btc">BTC 250 648</span>
+              <img src="images\^.svg" alt="arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="transactions">
+          <ul class="nav justify-content-end">
+            <div class="transfer">
+              <li class="nav-item">
+                <a class="nav-link" href="#">MONEY TRANSFER</a>
+              </li>
+            </div>
+            
+            <div class="charge">
+              <li class="nav-item">
+                <a class="nav-link" href="#">CHARGE PHONE</a>
+              </li>
+            </div>
+            
+            <div class="replanish">
+              <li class="nav-item">
+                <a class="nav-link" href="#">REPLENISH CARD</a>
+              </li>
+            </div>
+            
+            
+          </ul>
+        </div>
+        
+        <div class="user-search-container">
+          <span class="hello">Hello, Nik!</span>
+          <div class="search-button" id="searchButton">
+            <img src="images\magnifying-glass-browser.svg" alt="Search Icon">
+            <button type="button" id="searchButton">Search</button>  
+          </div>
+          <div class="user-avatar">
+            <img src="images\avatar.svg" alt="User Avatar">
+            <span class="badge"></span>
+          </div>
+        </div>
+    </nav>
+  </div>
+
+  <div class="d-flex">
+    <div class="sidebar-menu">
+      <nav class="navbar">
+        <ul class="navbar-nav d-flex flex-column">
+          <li class="nav-item active">
+            <div class="d-flex justify-content-center align-items-center">
+              <img src="images\home.svg" alt="icon-home">
+            </div>
+            <a class="nav-link text-center" aria-current="page" href="#">Dashboard</a>  
+          </li>
+          <li class="nav-item transaction">
+            <div class="d-flex justify-content-center align-items-center">
+              <img src="images\pie-chart.svg" alt="pie-chart">
+            </div>
+            <a class="nav-link text-center" href="#">Transaction</a>
+          </li>
+          <li class="nav-item">
+            <div class="d-flex justify-content-center align-items-center">
+              <img src="images\id-card.svg" alt="id-card"> 
+            </div>
+            <a class="nav-link text-center" href="#">Account/Cards</a>
+          </li>
+          <li class="nav-item">
+            <div class="d-flex justify-content-center align-items-center">
+              <img src="images\copy.svg" alt="copy">
+            </div>
+            <a class="nav-link text-center" href="#">Loans/Deposits</a>
+          </li>
+          <li class="nav-item">
+            <div class="d-flex justify-content-center align-items-center">
+              <img src="images\piggy-bank.svg" alt="piggy-bank">
+            </div>
+            <a class="nav-link text-center" href="#">Cashbank</a>
+          </li>
+          <li class="nav-item">
+            <div class="d-flex justify-content-center align-items-center">
+              <img src="images\money.svg" alt="money">
+            </div>
+            <a class="nav-link text-center" href="#">Bank services</a>
+          </li>
+          <li class="nav-item support">
+            <div class="d-flex justify-content-center align-items-center">
+              <img src="images\customer-service-copy.svg" alt="customer-service"> 
+            </div>
+            <a class="nav-link text-center" href="#">Support</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body-1">
+              <div class="col">
+                <span class="balance">150 000</span>
+                <span class="currency">UAH</span>
+                <span class="number-card">2132  8732  2347  3478</span>
+                <span class="expiration-date">07/20</span>
+              </div>
+              <img src="images\Mastercard.svg" alt="icon-mastercard">
+              <img src="images\edit.svg" alt="icon-edit" class="second-image">
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body-2">
+              <div class="col">
+                <span class="balance">12 180</span>
+                <span class="currency">USD</span>
+                <span class="number-card">8346  5248  6232  7813</span>
+                <span class="expiration-date">10/24</span>
+              </div>
+              <img src="images\visa.svg" alt="icon-visa">
+              <img src="images\edit.svg" alt="icon-edit" class="second-image">
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body-3">
+              <div class="col">
+                <span class="balance">8 305</span>
+                <span class="currency">EUR</span>
+                <span class="number-card">5438  2343  0474  7324</span>
+                <span class="expiration-date">14/28</span>
+              </div>
+              <img src="images\Payoneer.svg" alt="icon-payoneer">
+              <img src="images\edit.svg" alt="icon-edit" class="second-image">
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body-4">
+              <div class="col">
+                <span class="balance">2.023172</span>
+                <span class="currency">BTC</span>
+                <span class="number-card">6534  9823  9234  0347</span>
+                <span class="expiration-date">08/26</span>
+              </div>
+              <img src="images\btc.svg" alt="icon-btc">
+              <img src="images\edit.svg" alt="icon-edit" class="second-image">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <div class="card-balance-summary">
+            <div class="card-header d-flex">
+              <div class="p-2 flex-grow-1">Balance summary</div>
+              <span class="week p-2">Week</span>
+              <span class="month p-2">Month</span>
+              <span class="year p-2">Year</span>
+              <span class="other p-2">Other</span>
+            </div>
+            <div class="card-chart">
+              <canvas class="line" width="600" height="230"></canvas>
+            </div>
+            <div class="card-footer">
+              <div class="total">Total balance:</div>
+              <div class="dropdown">
+                <span>29 480</span>
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  USD</button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Another action</button></li>
+                  <li><button class="dropdown-item" type="button">Something else here</button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-expense">
+            <div class="card-header d-flex">
+              <div class="p-2 flex-grow-1">Expense categories</div>
+              <span class="week p-2">Week</span>
+              <span class="month p-2">Month</span>
+              <span class="year p-2">Year</span>
+              <span class="other p-2">Other</span>
+            </div>
+            <div class="card-chart d-flex">
+              <div class="details">
+                <ul>
+                  <li class="circle-1"><span class="percentage">25%</span> Vehicle and trnsport</li>
+                  <li class="circle-2"><span class="percentage">23%</span> Groceries and food</li>
+                  <li class="circle-3"><span class="percentage">18%</span> Clothes and shoes</li>
+                  <li class="circle-4"><span class="percentage">16%</span> Cafe and restaurants</li>
+                  <li class="circle-5"><span class="percentage">15%</span> Mobile and internet</li>
+                  <li class="circle-6"><span class="percentage">10%</span> House and services</li>
+                  <li class="circle-7"><span class="percentage">9%</span> Other expenses</li>
+                </ul>
+              </div>
+              
+              <div class="chart">
+                <canvas class="doughnut" width="250" height="250"></canvas>
+                <div class="dropdown ms-auto">
+                  <span>-6 567</span>
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    USD</button>
+                  <ul class="dropdown-menu">
+                    <li><button class="dropdown-item" type="button">Action</button></li>
+                    <li><button class="dropdown-item" type="button">Another action</button></li>
+                    <li><button class="dropdown-item" type="button">Something else here</button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>  
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="history">
+            <div class="card-header d-flex">
+              <div class="transaction">Transaction history</div>
+              <div class="dropdown ms-auto">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Any currency
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Another action</button></li>
+                  <li><button class="dropdown-item" type="button">Something else here</button></li>
+                </ul>
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Any categories
+                 </button>
+                 <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Another action</button></li>
+                  <li><button class="dropdown-item" type="button">Something else here</button></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="card-footer">
+              <div class="col-12">
+                <span class="date">December 31</span>
+                <div class="transaction">
+                  <div class="col-10">
+                    <div class="lemonade">
+                      <img src="images\lemonade.svg" alt="icon">
+                    </div>
+                    <div class="spans">
+                      <span class="operation">"Food & Drinks" restaurant</span>
+                      <span class="procedure">Cafe and restaurants</span>
+                      <span class="cardnum">Card: **3478</span>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <span class="sum">- 480</span>
+                    <span class="currency">UAH</span>
+                  </div>
+                </div>
+                <div class="transaction">
+                  <div class="col-10">
+                    <div class="basket">
+                      <img src="images\shopping-basket.svg" alt="icon">
+                    </div>
+                    <div class="spans">
+                      <span class="operation">"Walmart" store (Main Str. 13)</span>
+                      <span class="procedure">Groceries & food</span>
+                      <span class="cardnum">Card: **7813</span>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <span class="sum">- 80</span>
+                    <span class="currency">USD</span>
+                  </div>
+                </div>
+                <div class="transaction">
+                  <div class="col-10">
+                    <div class="alexey">
+                      <img src="images\alexey.svg" alt="icon">
+                    </div>
+                    <div class="spans-alexey">
+                      <span class="operation">Transfer from</span>
+                      <span class="name">Alexey</span>
+                      <span class="procedure">Transactions</span>
+                      <span class="cardnum">To card: **3478</span>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <span class="sum-add">6000</span>
+                    <span class="currency">UAH</span>
+                  </div>
+                </div>
+                
+              </div>
+              
+              <div class="w-100"></div>
+  
+              <div class="col-12">
+                <span class="date">December 29</span>
+                <div class="transaction">
+                  <div class="col-10">
+                    <div class="bag">
+                      <img src="images\shopping-bag.svg" alt="icon">
+                    </div>
+                    <div class="spans">
+                      <span class="operation">"Zara Man" store</span>
+                      <span class="procedure">Clothes & shoes</span>
+                      <span class="cardnum">Card: **7324</span>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <span class="sum">- 230</span>
+                    <span class="currency">EUR</span>
+                  </div>
+                </div>
+                <div class="transaction">
+                  <div class="col-10">
+                    <div class="download">
+                      <img src="images\download-1.svg" alt="icon">
+                    </div>
+                    <div class="spans">
+                      <span class="operation">Replenishment from "iTerminal N861"</span>
+                      <span class="procedure">Transactions</span>
+                      <span class="cardnum">Card: **3478</span>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <span class="sum-add">8000</span>
+                    <span class="currency">UAH</span>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="w-100"></div>
+          
+              <div class="col-12">
+                <span class="date">December 24</span>
+                <div class="transaction">
+                  <div class="col-10">
+                    <div class="car">
+                      <img src="images\car-1.svg" alt="icon">
+                    </div>
+                    <div class="spans">
+                      <span class="operation">"Shell" gas station (Street Ave. 24)</span>
+                      <span class="procedure">Vehicle & transport</span>
+                      <span class="cardnum">Card: **7324</span>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <span class="sum">- 280</span>
+                    <span class="currency">EUR</span>
+                  </div>
+                </div>
+                <div class="transaction">
+                  <div class="col-10">
+                    <div class="wifi">
+                      <img src="images\wifi-3.svg" alt="icon">
+                    </div>
+                    <div class="spans">
+                      <span class="operation">Phone +380502338325 "Vodafone"</span>
+                      <span class="procedure">Mobile & internet</span>
+                      <span class="cardnum">Card: **3478</span>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <span class="sum">- 301</span>
+                    <span class="currency">UAH</span>
+                  </div>
+                </div>
+                <div class="transaction">
+                  <div class="col-10">
+                    <div class="flash">
+                      <img src="images\flash.svg" alt="icon">
+                    </div>
+                    <div class="spans">
+                      <span class="operation">"General Electric" housing services</span>
+                      <span class="procedure">House and services</span>
+                      <span class="cardnum">Card: **7813</span>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <span class="sum">- 540</span>
+                    <span class="currency">USD</span>
+                  </div>
+                </div>
+              </div>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/scripts.min.js"></script>
+  <!-- <script src="json/data.json"></script> -->
+</body>
+</html>

@@ -1,3 +1,4 @@
+const gulp = require("gulp");
 const { src, dest, watch, series } = require("gulp");
 const concat = require("gulp-concat");
 const sass = require("gulp-sass")(require('sass'));
@@ -5,83 +6,83 @@ const autoprefixer = require("gulp-autoprefixer");
 const rename = require("gulp-rename");
 const cssnano = require("gulp-cssnano");
 const uglify = require("gulp-uglify");
+var browserSync = require('browser-sync').create();
 const imagemin = require("gulp-imagemin");
 
-function simpleTask() {
-  console.log('This is a test task!');
-}
-exports.default = simpleTask
-
 //копіювання HTML файлів в папку dist
-function task_html () {
-  return src("app/*.html")
+const task_html = () => src("app/html/*.html")
   .pipe(dest("dist"));
-}
+
 exports.html = task_html
 
 //об'єднання, компіляція Sass в CSS, додавання префіксів і подальша мінімалізація коду
-function task_sass() {
-  return src("app/sass/*.sass")
-  .pipe(concat('styles.sass'))
+const task_sass = () => src("app/sass/*.scss")
+  .pipe(concat('styles.scss'))
   .pipe(sass())
-  .pipe(autoprefixer ({
-    browsers: ['last 2 versions'],
-    cascade: false
-  }))
   .pipe(cssnano())
   .pipe(rename({suffix:'.min'}))
   .pipe(dest("dist/css"));
-} 
+ 
 exports.sass = task_sass
 
 //об'єднання і стискання JS-файлів
-function task_scripts() {
-  return src("app/js/*.js")//вихідна директорія файлів
+const task_scripts = () => src("app/js/*.js")//вихідна директорія файлів
   .pipe(concat('scripts.js'))//конкатенація js-файлів в один
   .pipe(uglify())//стиснення коду
   .pipe(rename({suffix:'.min'}))//перейменування файлу з приставкою .min
   .pipe(dest("dist/js"));//директорія продакшена
-}
+
 exports.scripts = task_scripts
 
 //стискання зображень
-function task_imgs() {
-  return src("app/img/*.+(jpg|jpeg|png|gif)")
+const task_imgs = () => src("app/img/*.+(jpg|jpeg|png|gif|svg)")
   .pipe(imagemin({
     progressive: true,
     svgoPlugins: [{removeViewBox: false}],
     interlaced: true
   }))
   .pipe(dest("dist/images"))
-}
+
+  const lib_css_task = () => src('app/lib/css/bootstrap.min.css')
+  .pipe(dest('dist/css'));
+
+  const lib_js_task = () => src('app/lib/js/bootstrap.min.js')
+  .pipe(dest('dist/js'));
+
 exports.imgs = task_imgs
 
+const task_json = () => src("app/json/data.json")
+  .pipe(dest("dist/json"));
+
+exports.json = task_json;
+
 //відстежування за змінами у файлах
-function task_watch() {
-  watch("app/*.html",task_html);
+const task_watch = () => {
+  watch("app/html/*.html",task_html);
   watch("app/js/*.js",task_scripts);
-  watch("app/sass/*.sass",task_sass);
+  watch("app/sass/*.scss",task_sass);
   watch("app/images/*.+(jpg|jpeg|png|gif)",task_imgs);
-}
+
+  browserSync.init({
+    server: {
+        baseDir: "./dist"
+    }
+});
+
+};
+  
+
 exports.watch = task_watch
 
+
 //запуск тасків за замовчуванням
-// exports.build = build;
-exports.default = series(task_html,task_sass,task_scripts,task_imgs,
-  task_watch);
-
-//обробляємо html файли
-function html() {
-  return src("app/**/*.html")//Беремо файли з розширенням html із папки app/ та усіх підпапок
-  .pipe(dest("build/"));//переміщаємо у папку build/
-}
-
-//обробляємо файли зображень
-function img() {
-  return src("app/img/*.{png,jpg,jped,gif}",//беремо файли з розширенням png,jpg,jped,gif
-         {base:"app"}) //задаємо параметр base, щоб зберегти вложеність файлів
-      .pipe(dest("build/")); //переміщаємо у папку build/
-}
-
-//збирання проекту
-exports.build = series(html, img);
+exports.default = series(
+  task_html,
+  task_sass,
+  task_scripts,
+  task_imgs,
+  lib_css_task,
+  lib_js_task,
+  task_json,
+  task_watch
+  );

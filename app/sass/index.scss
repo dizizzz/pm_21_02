@@ -1,0 +1,825 @@
+body {
+  color: white;
+}
+ 
+.top-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #2c2c2c;
+  height: 55px;
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+  z-index: 1000;
+  .navbar {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .navbar-brand {
+    color: #ffffff;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-right: 7px;
+  }
+  .navbar-brand.web {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'NexalLight', sans-serif; 
+  }
+  
+  .line-divider {
+    background-color: #ffffff;
+    height: 12px;
+    width: 1px;
+    margin-right: 7px;
+  }
+
+  .course {
+    padding-left: 25px;
+    .row {
+      width: 408px;
+      span.usd, span.eud, span.btc {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.379);
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+      }
+
+      
+      .line {
+        width: 0;
+        color: rgba(255, 255, 255, 0.379);
+      }
+    }
+    
+  }
+
+  .transactions {
+    font-size: 11px;
+    margin-left: 304px;
+    .transfer {
+      justify-content: center;
+      background-color: #373737;
+      height: 32px;
+      border-radius: 30px 0 0 30px;
+      margin: 1px;
+
+    }
+    .charge {
+      background-color: #373737;
+      height: 32px;
+      margin: 1px;
+
+    }
+    .replanish {
+      background-color: #373737;
+      height: 32px;
+      border-radius: 0 30px 30px 0;
+      margin: 1px;
+    }
+  }
+  .nav-link {
+    color: white;
+  }
+  
+  .user-search-container {
+    display: flex;
+    margin-left: auto;
+    align-items: center; 
+    position: relative;
+
+    span.hello {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.379);
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      padding-right: 55px;
+    }
+
+    .search-button {
+      position: absolute;
+      background-color: #363636;
+      border-bottom-left-radius: 35px;
+      border-top-left-radius: 35px;
+      width: 69px; 
+      height: 30px; 
+      right: 10px;
+  
+      img {
+        margin-left: 10px;
+      }
+  
+      button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 35px;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        opacity: 0;
+        font-size: 14px;
+        background-color: #363636;
+        color: white;
+      }
+      
+    }
+    
+    .user-avatar {
+      width: 35px; 
+      height: 35px; 
+      border-radius: 50%; 
+      background-color: #ccc;
+      overflow: hidden;
+      right: 0;
+      z-index: 3;
+  
+      span.badge {
+        position: absolute;
+        top: 7px;
+        right: -8px;
+        transform: translate(-50%, -50%);
+        padding: 1px;
+        background-color: #dc3545; 
+        border: 3px solid #dc3545;
+        border-radius: 50px;
+        width: 8px; 
+        height: 8px;
+        display: flex;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 0 1px 4px #dc35462b;
+       
+      }
+    }
+  }
+
+  
+}
+
+.sidebar-menu {
+  width: 150px;
+  background-color: #373737;
+  text-align: center;
+  margin-top: 55px;////////////////////////////
+  .navbar {
+    //height: calc(100vh - 55px);
+    height: 100%;
+    align-items: start;
+    padding-top: 55px;
+    ul.navbar-nav {
+      width: 100%;
+
+      .nav-item {
+        margin-bottom: 15px;
+        font-family: 'Open Sans', sans-serif;
+        line-height: 28px;
+
+        &.support {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+        }
+        
+        &.active {
+          background-color: #3d3d3d;
+          height: 100px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative; // Додайте цю властивість для псевдоелементів
+
+          
+
+          &:before,
+          &:after {
+            content: "";
+                position: absolute;
+                width: 15px;
+                height: 50px;
+                top: 0;
+                right: 0;
+                background-color: #3d3d3d; // Колір прямокутника
+          }
+
+          &:before {
+            border-bottom-right-radius: 15px;
+                box-shadow: 5px 5px 0 5px #f3f3f3;
+                top: 0px;
+          }
+
+          &:after {
+            border-top-right-radius: 15px; 
+                box-shadow: 5px 5px 0 5px #f3f3f3;
+                top: 50px;
+          }
+        }
+
+        &.transaction {
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 50px;
+            right: 0;
+            background-color: #373737; 
+            top: -15px;
+          }
+        }
+
+        .nav-link {
+          color: white;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.8);
+        }
+        
+          
+      }
+    }
+  }
+}
+
+.container-fluid {
+  background-color: #f3f3f3;
+  width: 100%;
+  padding: 45px 0 0 44px;
+  margin-top: 55px;
+  .row {
+    --bs-gutter-x:0;
+    margin-right: 0;
+    padding-bottom: 20px;
+
+    .card {
+      width: 308px; 
+      height: 180px;  
+      background-color: #2d2e2d;
+      border-radius: 20px;
+
+      .col {
+        padding-left: 23px;
+        padding-top: 12px;
+
+        span.balance {
+          font-size: 20px;
+          color: #ffffff;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 400;
+          line-height: 51px;
+          letter-spacing: 3px;
+        }
+  
+        span.currency {
+          font-size: 15px;
+          color: rgba(255, 255, 255, 0.551);
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 400;
+          line-height: 51px;
+        }
+  
+        span.number-card {
+          display: block;
+          font-size: 18px;
+          color: rgba(255, 255, 255, 0.379);
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 300;
+          line-height: 48px;
+          letter-spacing: 4px;
+        }
+  
+        span.expiration-date {
+          display: block;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.379);
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 400;
+          line-height: 48px;
+        }
+      }
+      img {
+        position: absolute;
+        bottom: 29px;
+        right: 26px;
+
+        &.second-image {
+          top: 29px;
+          right: 26px;
+        }
+      }
+    } 
+  }
+  
+  .row {
+    
+    
+    .card-balance-summary {
+      background-color: white;
+      height: 380px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      color: #000;
+      padding: 15px;
+      margin: 15px 26px 0 0;
+
+      .card-header {
+        font-size: 16px;
+        color: black;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+  
+        span {
+          font-size: 14px;
+          color: rgba(4, 4, 4, 0.379);
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 300;
+        }
+        span.week {
+          color: #e6686b;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 700;
+          text-decoration: underline;
+        }
+      }
+
+      .card-chart {
+        padding-top: 30px;
+      }
+  
+      .card-footer {
+        font-size: 14px;
+        color: black;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        padding-top: 10px;
+        display: flex; 
+        align-items: center;
+        justify-content: end;
+  
+  
+        .total {
+          padding-right: 20px;
+        }
+  
+        .dropdown {
+          color: black;
+          font-size: 20px;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 700;
+          
+
+          span {
+            letter-spacing: 2px;
+            font-size: 22px;
+          }
+
+          button {
+            &.btn-secondary {
+              border: none; 
+              background-color: transparent; // Встановлення прозорого фонового кольору
+              color: black;
+              font-size: 15px;
+              font-family: 'Open Sans', sans-serif;
+              font-weight: 700;
+              text-decoration: underline;
+              padding-left: 0;
+
+              &::after {
+                content: '^'; // Ваш символ для стрілочки, інвертованої
+                transform: rotate(180deg); // Поворот стрілочки на 180 градусів
+                border-top: 0;
+                font-size: 11px;
+              }
+            }
+          } 
+        }
+      }
+    }
+
+    .card-expense {
+      margin: 30px 23px 0 0;
+      background-color:white;
+      height: 410px;
+      border-radius: 20px;
+      color: #000;
+      padding: 15px;
+  
+      .card-header {
+        font-size: 16px;
+        color: black;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+  
+        span {
+          font-size: 14px;
+          color: rgba(4, 4, 4, 0.379);
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 300;
+        }
+        span.week {
+          color: #e6686b;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 700;
+          text-decoration: underline;
+        }
+      }
+  
+      .card-chart {
+        height: 355px;
+        overflow: hidden;
+        position: relative;
+        justify-content: space-around;
+  
+        .details {
+          ul {
+            list-style: none; /* Видаляємо маркери списку */
+            margin: 0;
+            padding: 0;
+            padding-left: 10px;
+
+            // $colors: #b6a28d, #ff3f73, #383838, #9961a8, #4483f2, #efc00c, #00d824;
+
+  
+            li {
+              position: relative;
+              font-size: 14px;
+              color: rgba(0, 0, 0, 0.379);
+              font-family: 'Open Sans', sans-serif;
+              font-weight: 400;
+              line-height: 48px;
+              padding-left: 19px;
+    
+        
+              span {
+                font-size: 15px;
+                color: black;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 600;
+                line-height: 48px;
+              }
+  
+  
+             
+  
+              &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                margin-right: 20px;
+              }  
+
+                &.circle-1::before {
+                  background-color: #b6a28d;
+                }
+                &.circle-2::before {
+                  background-color: #ff3f73;
+                }
+                &.circle-3::before {
+                  background-color: #383838;
+                }
+                &.circle-4::before {
+                  background-color: #9961a8;
+                }
+                &.circle-5::before {
+                  background-color: #4483f2;
+                }
+                &.circle-6::before {
+                  background-color: #efc00c;
+                }
+                &.circle-7::before {
+                  background-color: #00d824;
+                }
+
+              
+            }
+          }
+        }
+        
+        .chart {
+          position: relative;
+
+          .doughnut {
+            padding: 15px;
+            width: 250px;
+            height: 250px;
+            margin-top: 35px;
+          }
+
+          .dropdown {
+            position: absolute;
+            color: black;
+            font-size: 20px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            line-height: 48px;
+            top: 37%;
+            left: 30%;
+            
+
+            span {
+              letter-spacing: 1px;
+            }
+
+            button {
+              &.btn-secondary {
+                border: none; 
+                background-color: transparent; // Встановлення прозорого фонового кольору
+                color: black;
+                font-size: 15px;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 700;
+                text-decoration: underline;
+                padding-left: 0;
+  
+                &::after {
+                  content: '^'; // Ваш символ для стрілочки, інвертованої
+                  transform: rotate(180deg); // Поворот стрілочки на 180 градусів
+                  border-top: 0;
+                  font-size: 11px;
+                }
+              }
+            } 
+          }
+        }
+      }
+    }
+
+    .history {
+      background-color: white;
+      border-radius: 20px;
+      margin: 15px 25px 0 0;
+
+      .card-header {
+        padding: 31px 14px 0 23px;
+        height: 80px;
+        .transaction {
+          font-size: 16px;
+            color: black;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+        }
+        .dropdown {
+          button {
+            &.btn-secondary {
+              border: none; 
+              background-color: transparent; // Встановлення прозорого фонового кольору
+              color: rgba(0, 0, 0, 0.601);
+              font-size: 14px;
+              font-family: 'Open Sans', sans-serif;
+              font-weight: 400;
+              letter-spacing: 1px;
+
+              &::after {
+                content: '^'; // Ваш символ для стрілочки, інвертованої
+                transform: rotate(180deg); // Поворот стрілочки на 180 градусів
+                border-top: 0;
+                font-size: 11px;
+              }
+            }
+
+            .menu {
+              li {
+                button.dropdown-item {
+                  border: none; // Встановлення border на none
+                  background-color: transpaent; // Встановлення прозорого фонового кольору
+                  &::after {
+                    content: '^'; // Ваш символ для стрілочки, інвертованої
+                  }
+                }
+              }
+            }
+          }
+        }       
+      }
+
+      .line{
+        background-color: #77777755;
+        height: 1px;
+        width: 93%;
+        margin: 0 auto;
+      }
+
+      .card-footer {
+        background-color: #ffffff;
+        color: #000;
+        padding: 23px;
+        border-radius: 30px;
+
+        .col-12 {
+          padding: 10px 0;
+          .date {
+            font-size: 14px;
+            font-weight: bold;
+            color: #cccccc;
+          }
+
+          .transaction {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+        
+            .col-10 {
+              display: flex; 
+              align-items: center;
+              
+              .lemonade {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 40px;
+                height: 40px;
+                background: linear-gradient(to right, #a363a8, #8b60a9);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        
+                img {
+                  object-fit: cover;
+                }
+              }
+              .basket {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 40px;
+                height: 40px;
+                background: linear-gradient(to right, #ff717c, #ff286c);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        
+                img {
+                  object-fit: cover;
+                }
+              }
+              .alexey {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 40px;
+                height: 40px;
+                background-color: #ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        
+                img {
+                  object-fit: cover;
+                }
+              }
+              .bag {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 40px;
+                height: 40px;
+                background: linear-gradient(to right, #3e3d3e, #2f2f2f);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        
+                img {
+                  object-fit: cover;
+                }
+              }
+              .download {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 40px;
+                height: 40px;
+                background: linear-gradient(to right, #00f40a, #00b443);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        
+                img {
+                  object-fit: cover;
+                }
+              }
+              .car {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 40px;
+                height: 40px;
+                background: linear-gradient(to right, #c1ad95, #a08d7b);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        
+                img {
+                  object-fit: cover;
+                }
+              }
+              .wifi {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 40px;
+                height: 40px;
+                background: linear-gradient(to right, #25a3f9, #6265ea);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        
+                img {
+                  object-fit: cover;
+                }
+              }
+              .flash {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 40px;
+                height: 40px;
+                background: linear-gradient(to right, #f0cd0e, #efb10a);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        
+                img {
+                  object-fit: cover;
+                }
+              }
+        
+              .spans {
+                padding-left: 10px;
+                .operation {
+                  font-family: 'Open Sans', sans-serif;
+                  font-weight: bold;
+                  font-size: 14px;
+                  display: block;
+                }
+        
+                .procedure {
+                  font-family: 'Open Sans', sans-serif;
+                  font-size: 12px;
+                  color: #777;
+                }
+        
+                .cardnum {
+                  font-family: 'Open Sans', sans-serif;
+                  font-size: 12px;
+                  color: #777;
+                }
+              }
+
+              .spans-alexey {
+                padding-left: 10px;
+                .operation {
+                  font-family: 'Open Sans', sans-serif;
+                  font-weight: bold;
+                  font-size: 14px;
+                }
+
+                .name {
+                  font-family: 'Open Sans', sans-serif;
+                  font-weight: bold;
+                  font-size: 14px;
+                  color: #019fbc;
+                  text-decoration: underline;
+                }
+        
+                .procedure {
+                  font-family: 'Open Sans', sans-serif;
+                  font-size: 12px;
+                  color: #777;
+                  display: block;
+                }
+        
+                .cardnum {
+                  font-family: 'Open Sans', sans-serif;
+                  font-size: 12px;
+                  color: #999999;
+                }
+              }
+            }
+
+            .col-2 {
+              display: flex;
+              font-size: 20px;
+              font-family: 'Open Sans', sans-serif;
+              font-weight: 700;
+              line-height: 48px;
+              justify-content: flex-end;
+
+              .sum-add {
+                color: #39b54a;
+              }
+          
+              .currency {
+                align-self: flex-end; // Вирівнює currency в кінці стовпчика
+                margin-left: 5px;
+                color: #999999;
+                font-size: 13px;
+                line-height: 41px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
